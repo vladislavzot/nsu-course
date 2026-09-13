@@ -23,6 +23,8 @@ public class Order {
 
     private String quantity;
 
+    private Long ownerId;
+
     public Order() {
     }
 
@@ -31,35 +33,19 @@ public class Order {
         this.quantity = quantity;
     }
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public ProductType getProductType() { return productType; }
+    public void setProductType(ProductType productType) { this.productType = productType; }
 
-    public ProductType getProductType() {
-        return productType;
-    }
+    public String getQuantity() { return quantity; }
+    public void setQuantity(String quantity) { this.quantity = quantity; }
 
-    public void setProductType(ProductType productType) {
-        this.productType = productType;
-    }
-
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
+    public Long getOwnerId() { return ownerId; }
+    public void setOwnerId(Long ownerId) { this.ownerId = ownerId; }
 
     public enum ProductType {
-        ELECTRONICS,
-        CLOTHING,
-        FOOD,
-        BOOKS,
-        FURNITURE
+        ELECTRONICS, CLOTHING, FOOD, BOOKS, FURNITURE
     }
 }
